@@ -21,6 +21,9 @@ var Water = mongoose.model("Water", {
   },
   status: {
     type: "String"
+  },
+  desc: {
+    type: "String"
   }
 });
 
