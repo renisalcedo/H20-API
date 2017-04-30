@@ -50,25 +50,25 @@ app.get('/waters', (req, res) => {
   });
 });
 
-// GET Waters
-app.get('/waters/:id', (req, res) => {
-  var id = req.params.id;
+/*// GET Waters*/
+//app.get('/waters/:id', (req, res) => {
+  //var id = req.params.id;
 
-  if(!ObjectID.isValid(id)) {
-    return res.status(404).send();
-  }
+  //if(!ObjectID.isValid(id)) {
+    //return res.status(404).send();
+  //}
 
-  Water.findById(id).then((water) => {
-    if(!water) {
-      return res.status(404).send();
-    }
+  //Water.findById(id).then((water) => {
+    //if(!water) {
+      //return res.status(404).send();
+    //}
 
-    res.send({water});
-  }).catch((e) => {
-    res.status(400).send();
-  });
+    //res.send({water});
+  //}).catch((e) => {
+    //res.status(400).send();
+  //});
 
-});
+/*});*/
 
 app.listen(port, () => {
   console.log("Started on port: " + port);
