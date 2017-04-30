@@ -23,6 +23,7 @@ app.post('/waters', (req, res) => {
 
   water.save().then((doc) => {
     res.send(doc);
+    console.log(water);
   }, (e) => {
     res.status(400).send(e);
   });
